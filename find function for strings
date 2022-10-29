@@ -1,0 +1,44 @@
+
+#include <iostream>
+
+using namespace std;
+size_t findInString(const string &s, const string &toFind){
+    int constrain1= s.size();
+    int constrain2=toFind.size();
+    int match=1;
+    
+    for(int i=0;i<constrain1;i++){
+        if(s[i]==toFind[0]){
+            int z=i;
+            for(int t=0; t<constrain2 ;z++,t++){
+                //cout<<"t = "<<t<<" \t"<< "z = "<<z<<endl;    
+                if(s[z]!=toFind[t]){
+                    //cout<<"loop broken"<< endl;
+                    break;
+                }
+                if(t==constrain2-1){
+                    return i;
+                }
+            } 
+             //cout<<"------"<<endl;   
+                
+            }    
+            
+        }
+        
+   
+        
+       
+   return string::npos;     
+    
+}
+int main()
+{
+    string s = "This is a string, find something in here!";
+    string toFind = "he5re";
+    cout<<findInString(s,toFind)<<endl;
+    
+     
+
+    return 0;
+}
