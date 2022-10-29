@@ -1,0 +1,38 @@
+
+#include <iostream>
+
+using namespace std;
+template <class T>
+void _swap(T &x, T &y){
+    T temp;
+    temp=x;
+    x=y;
+    y=temp;
+
+}
+template <class T>
+void sort_array(T x[], const T n){
+    for(int i=0; i<n-1; i++){
+        for(int y=i+1; y<n; y++){
+            if(x[i]>x[y]){
+                _swap(x[i],x[y]);
+            }
+        }
+    }
+    
+}
+int main()
+{
+    int x[]={15,17,22,15,74,354,4,36,78,42,1,39};
+    int length= sizeof(x)/sizeof(int);
+    
+    sort_array<int>(x,length);
+    
+    for(int i=0; i<length;i++){
+    
+        cout << x[i] << endl;
+    }
+    
+    
+    return 0;
+}
