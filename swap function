@@ -1,0 +1,24 @@
+
+#include <iostream>
+
+using namespace std;
+template <class T>
+void _swap(T &x, T &y){
+    T temp;
+    temp=x;
+    x=y;
+    y=temp;
+
+}
+
+
+int main()
+{
+    int x=99;
+    int y=11;
+    _swap(x,y);
+    
+    cout<<"x="<<x<<endl;
+    cout<<"y="<<y<<endl;
+    return 0;
+}
