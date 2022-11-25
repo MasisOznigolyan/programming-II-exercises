@@ -1,3 +1,6 @@
+#include <iostream>
+
+using namespace std;
 void _swap(char *a, char *b){
     char temp=*a;
     *a=*b;
@@ -17,4 +20,12 @@ string int2str(int x){
         j--;
     }
     return str;
+}
+int main()
+{
+    int x=123;
+    string s;
+    cout<<int2str(x);
+
+    return 0;
 }
